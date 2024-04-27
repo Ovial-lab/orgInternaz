@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/subscriptions.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.container h1 {
+    margin-bottom: 40px;
+    color: #FEFFFF
+}
+.subscription {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.subscription .tier {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.subscription .tier h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+.subscription .tier .price {
+    font-size: 24px;
+    color: #333;
+}
+.buy-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.footer {
+    background-color: #17252A;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+.footer a:hover {
+    transform: scale(1.2);
+}
+.footer .social-media a {
+    font-size: 24px;
+}
+
+    /* Styles for modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 60px;
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 400px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* Styles for form and input fields */
+    form {
+        margin-top: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    select,
+    input[type="text"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .confirm-button {
+        width: 48%;
+    }
+
+    .go-back-button {
+        width: 48%;
+        background-color: #ddd;
+        color: #333;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .go-back-button:hover {
+        background-color: #bbb;
+    }
+    header {
+        background-color: #17252A;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+    }
+
+    .header {
+        color: #fff;
+        text-decoration: none;
+        font-size: 40px;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-right: 20px;
+    }
+
+    .nav-links li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .logout {
+        color: #333;
+        padding: 8px 16px;
+        border-radius: 5px;
+    }

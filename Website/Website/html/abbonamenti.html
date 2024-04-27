@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/abbonamenti.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Subscriptions</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="header">Subscriptions</h1>
+            <ul class="nav-links">
+                <li><a href="signed_=home.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="abbonamenti.html">Subscriptions</a></li>
+                <li><a href="home.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+  <div class="container">
+      <h1>Scegli il tuo livello di supporto</h1>
+      <div class="subscription">
+        <div class="tier">
+            <h2>Sostenitore</h2>
+            <div class="price">€50/anno</div>
+            <div class="features"></div>
+            <a href="#" class="buy-button" onclick="openModal('modalSostenitore')">Acquista ora</a>
+        </div>
+          <div class="tier">
+              <h2>Socio</h2>
+              <div class="price">€100/anno</div>
+              <div class="features"></div>
+              <a href="#" class="buy-button" onclick="openModal('modalSocio')">Acquista ora</a>
+          </div>
+          <div class="tier">
+              <h2>Affiliato</h2>
+              <div class="price">€200/anno</div>
+              <div class="features"></div>
+              <a href="#" class="buy-button" onclick="openModal('modalAffiliato')">Acquista ora</a>
+          </div>
+      </div>
+  </div>
+
+  <!-- Modal for Socio -->
+  <div id="modalSocio" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalSocio')">&times;</span>
+        <h2>Dettagli pagamento Socio</h2>
+        <form>
+            <label for="paymentMethod">Metodo di pagamento:</label>
+            <select id="paymentMethod" name="paymentMethod">
+                <option value="circuit">Carta di credito/debito</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <label for="cardholderName">Nome sulla carta:</label>
+            <input type="text" id="cardholderName" name="cardholderName" required>
+
+            <label for="cardNumber">Numero della carta:</label>
+            <input type="text" id="cardNumber" name="cardNumber" required>
+
+            <label for="expiryDate">Data di scadenza:</label>
+            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+
+            <div class="button-container">
+                <input type="submit" value="Conferma pagamento" class="confirm-button">
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal for Sostenitore -->
+<div id="modalSostenitore" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modalSostenitore')">&times;</span>
+      <h2>Dettagli pagamento Socio</h2>
+      <form>
+          <label for="paymentMethod">Metodo di pagamento:</label>
+          <select id="paymentMethod" name="paymentMethod">
+              <option value="circuit">Mastercard</option>
+              <option value="circuit">Maestro</option>
+              <option value="circuit">Visa</option>
+              <option value="circuit">Postepay</option>
+          </select>
+
+          <label for="cardholderName">Nome sulla carta:</label>
+          <input type="text" id="cardholderName" name="cardholderName" required>
+
+          <label for="cardNumber">Numero della carta:</label>
+          <input type="text" id="cardNumber" name="cardNumber" required>
+
+          <label for="expiryDate">Data di scadenza:</label>
+          <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" name="cvv" required>
+
+          <div class="button-container">
+              <input type="submit" value="Conferma pagamento" class="confirm-button">
+          </div>
+      </form>
+  </div>
+</div>
+
+<!-- Modal for Affiliato -->
+<div id="modalAffiliato" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modalAffiliato')">&times;</span>
+      <h2>Dettagli pagamento Socio</h2>
+      <form>
+          <label for="paymentMethod">Metodo di pagamento:</label>
+          <select id="paymentMethod" name="paymentMethod">
+              <option value="circuit">Mastercard</option>
+              <option value="circuit">Maestro</option>
+              <option value="circuit">Visa</option>
+              <option value="circuit">Postepay</option>
+          </select>
+
+          <label for="cardholderName">Nome sulla carta:</label>
+          <input type="text" id="cardholderName" name="cardholderName" required>
+
+          <label for="cardNumber">Numero della carta:</label>
+          <input type="text" id="cardNumber" name="cardNumber" required>
+
+          <label for="expiryDate">Data di scadenza:</label>
+          <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" name="cvv" required>
+
+          <div class="button-container">
+              <input type="submit" value="Conferma pagamento" class="confirm-button">
+          </div>
+      </form>
+  </div>
+</div>
+    <div class="footer">
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    <script>
+        // Function to open modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Function to close modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
